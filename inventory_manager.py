@@ -47,7 +47,7 @@ class InventoryApp:
         auth_dialog = AuthenticationDialog(self.root)
         username, password = auth_dialog.result
 
-        # Validate user credentials (you may want to hash passwords in a real-world scenario)
+        # Validate user credentials
         if self.validate_user(username, password):
             messagebox.showinfo("Authentication", f"Welcome, {username}!")
         else:
@@ -55,7 +55,7 @@ class InventoryApp:
             self.root.destroy()
 
     def validate_user(self, username, password):
-        # Replace this with your actual user validation logic (e.g., check against a database)
+        # Will be changed to data from database
         return username == "admin" and password == "admin"
 
     def create_gui(self):
